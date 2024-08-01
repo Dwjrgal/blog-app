@@ -32,7 +32,7 @@ const Trending = () => {
         <h2>Trending</h2>
         
             {cards.map((card) => (
-                <div className=''>
+                <div>
                 <h4> {cards.title}</h4>
                 <p> {cards.text} </p>
                 <img 
