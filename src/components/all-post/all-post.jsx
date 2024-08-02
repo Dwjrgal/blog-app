@@ -49,7 +49,7 @@ const posts = [
 
 const AllPost = () => {
   return (
-    <div className="mt-24 flex flex-col gap-6 mx-8">
+    <div className="mt-24 flex flex-col gap-6 mx-20">
       <h3 className="text-md sm:text-lg font-bold">All Blog Post</h3>
       <ul className="flex gap-6 text-[10px] font-semibold">
         <li className=" hover:text-orange-500">All</li>
@@ -59,18 +59,18 @@ const AllPost = () => {
         <li className=" hover:text-orange-500">Technology</li>
         <li className=" hover:text-orange-500">Branding</li>
       </ul>
-      <section className="grid grid-cols-3 gap-4 items-center">
+      <section className="grid grid-cols-3 sm:gap-4  gap-2 items-center">
         {posts.map((posts) => (
-          <div className="sm:w-[320px] sm:h-[300px] border rounded flex flex-col gap-3 justify-center items-center">
+          <div className="sm:w-[280px] sm:h-[340px] border rounded flex flex-col gap-3 justify-center items-start pl-4">
             <img
-              className="sm:h-[140px] sm:w-[240px] rounded-md"
+              className="sm:h-[160px] sm:w-[240px] rounded-md"
               src={posts.photo}
               alt=""
             />
             <span className="text-[11px] h-5 w-24  text-blue rounded-md text-center bg-slate-200 text-indigo-600 font-extralight">
               {posts.badge}
             </span>
-            <p className=" sm:h-[80px] sm:w-[230px]  sm:text-[14x] font-semibold font-base">
+            <p className=" sm:h-[80px] sm:w-[230px]  sm:text-[14x] sm:font-semibold  sm:font-base">
               {posts.title}
             </p>
             <p className="text-[11px] font-extralight text-gray-600">
@@ -78,6 +78,9 @@ const AllPost = () => {
             </p>
           </div>
         ))}
+        <button className="h-10 w-24 border rounded-md text-xs font-extralight text-gray-500 mx-[160%] my-20">
+          Load More
+        </button>
       </section>
     </div>
   );

@@ -26,7 +26,7 @@ const cards = [
 const Trending = () => {
   return (
     <>
-      <div className="flex gap-4 flex-col mt-36">
+      <div className="flex gap-4 flex-col mt-36 mx-20">
         <h2 className="font-semibold text-md md:text-bold pl-6 ">Trending</h2>
         <div className="flex gap-6 justify-center">
           {cards.map((cards) => (
