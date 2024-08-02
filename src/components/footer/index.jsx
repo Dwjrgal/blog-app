@@ -5,9 +5,9 @@ import About from "./about";
 
 const Footer = () => {
   return (
-    <div className="flex">
+    <div className="flex mx-20">
       <About />
-      <Links />
+      {/* <Links /> */}
       <Menu />
     </div>
   );
