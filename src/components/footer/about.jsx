@@ -5,10 +5,6 @@ import { FaSquareInstagram } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import Menu from "./menu";
 
-
-
-
-
 const About = () => {
   return (
     <>
