@@ -5,10 +5,11 @@ import About from "./about";
 
 const Footer = () => {
   return (
-    <div className="flex mx-20">
-      <About />
-      {/* <Links /> */}
-      <Menu />
+    <div className="flex flex-col px-20 bg-[#E8E8EA] pt-10">
+      <div className="flex gap-20">
+       <About />   
+      </div>
+      <Links />
     </div>
   );
 };
