@@ -51,7 +51,7 @@ const AllPost = () => {
   return (
     <div className="mt-24 flex flex-col gap-6 mx-20">
       <h3 className="text-md sm:text-lg font-bold">All Blog Post</h3>
-      <ul className="flex gap-6 text-[10px] font-semibold">
+      <ul className="hidden md:flex gap-6 text-[10px] font-semibold">
         <li className=" hover:text-orange-500">All</li>
         <li className=" hover:text-orange-500">Design</li>
         <li className=" hover:text-orange-500">Travel</li>
@@ -59,11 +59,11 @@ const AllPost = () => {
         <li className=" hover:text-orange-500">Technology</li>
         <li className=" hover:text-orange-500">Branding</li>
       </ul>
-      <section className="grid grid-cols-3 sm:gap-4  gap-2 items-center">
+      <section className="md:grid md:grid-cols-3 md:gap-4  gap-2 items-center">
         {posts.map((posts) => (
-          <div className="sm:w-[280px] sm:h-[340px] border rounded flex flex-col gap-3 justify-center items-start pl-4">
+          <div className="md:w-[280px] w-[200px] h-[300px] md:h-[340px] border rounded flex flex-col gap-3 justify-center items-start pl-4">
             <img
-              className="sm:h-[160px] sm:w-[240px] rounded-md"
+              className="md:h-[160px] md:w-[240px] rounded-md"
               src={posts.photo}
               alt=""
             />
@@ -78,7 +78,7 @@ const AllPost = () => {
             </p>
           </div>
         ))}
-        <button className="h-10 w-24 border rounded-md text-xs font-extralight text-gray-500 mx-[160%] my-20">
+        <button className=" hidden md:flex h-10 w-24 border rounded-md text-xs font-extralight text-gray-500 mx-[160%] my-20">
           Load More
         </button>
       </section>

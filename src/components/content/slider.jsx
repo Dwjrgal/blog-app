@@ -12,10 +12,10 @@ const Slider = () => {
         <h4 className="h-[25px] w-[97px] text-center bg-blue-700 rounded-md text-white text-xs md:text-sm">
           Technology
         </h4>
-        <p className="sm:font-bold sm:text-2xl text-xs font-semibold">
+        <p className="sm:font-bold sm:text-2xl text-[10px] font-semibold">
           Grid system for better <br /> Design User Interface
         </p>
-        <span className="text-xs text-gray-600 font-thin">August 20, 2022</span>
+        <span className="hidden md:flex text-xs text-gray-600 font-thin">August 20, 2022</span>
       </div>
     </section>
   );

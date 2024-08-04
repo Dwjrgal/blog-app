@@ -5,8 +5,8 @@ import About from "./about";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col px-20 bg-[#E8E8EA] pt-10">
-      <div className="flex gap-20">
+    <div className="flex flex-col px-40 bg-[#E8E8EA] pt-10">
+      <div className="flex gap-20 items-center">
        <About />   
       </div>
       <Links />

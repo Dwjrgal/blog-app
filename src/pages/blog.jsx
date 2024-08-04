@@ -95,7 +95,7 @@ const Blog = () => {
       <>
     <div className="mt-24 flex flex-col gap-6 mx-20">
       <h3 className="text-md sm:text-lg font-bold">All Blog Post</h3>
-      <section className="grid grid-cols-3 sm:gap-4  gap-2 justify-enter">
+      <section className="md:grid md:grid-cols-3 sm:gap-4  gap-2 justify-enter">
         {posts.map((posts) => (
           <div className="sm:w-[280px] sm:h-[340px] border rounded flex flex-col gap-3 justify-center items-start pl-4">
             <img
@@ -114,7 +114,7 @@ const Blog = () => {
             </p>
           </div>
         ))}
-        <button className="h-10 w-24 border rounded-md text-xs font-extralight text-gray-500 mx-[160%] my-20">
+        <button className=" hidden md:flex h-10 w-24 border rounded-md text-xs font-extralight text-gray-500 mx-[160%] my-20">
           Load More
         </button>
       </section>
