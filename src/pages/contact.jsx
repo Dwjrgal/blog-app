@@ -28,7 +28,7 @@ const Contact = () => {
             <input type="text" placeholder='Subject'className='border rounded text-sm pl-2 py-1' />
             <input type="text" placeholder="Write a message" className='border rounded md:h-[133px] md:w-[420px] pl-4'/>
             </div>
-            <button className='bg-blue-700 text-white w-[130px] h-[40px] rounded-md'>Send Message</button>
+            <button className='hidden md:flex bg-blue-700 text-white w-[130px] h-[40px] rounded-md'>Send Message</button>
         </div>
     </section>
     </div>
