@@ -26,8 +26,8 @@ const cards = [
 const Trending = () => {
   return (
     <>
-   <div className="flex gap-4 flex-col mt-36 items-center">
-      <h2 className="font-bold text-xl md:text-bold">Trending</h2>
+      <div className="flex gap-4 flex-col mt-36 items-center">
+        <h2 className="font-bold text-xl md:text-bold">Trending</h2>
         <div className="md:flex md:gap-6">
           {cards.map((cards) => (
             <div className="relative flex flex-col sm:flex justify-end">
@@ -37,7 +37,10 @@ const Trending = () => {
               <p className="h-[70px] w-[160px] flex  text-[12px] absolute top-30 font-semibold pl-2 text-white ">
                 {cards.text}{" "}
               </p>
-              <img className="md:h-56 md:w-52 rounded-md h-40 w-40" src={cards.img} />
+              <img
+                className="md:h-56 md:w-52 rounded-md h-40 w-40 bg-blend-darken "
+                src={cards.img}
+              />
             </div>
           ))}
         </div>
