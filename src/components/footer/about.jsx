@@ -11,7 +11,7 @@ const About = () => {
       <section className="sm:flex sm:gap-40">
         <div className="md:flex md:flex-col md:gap-6">
           <h4 className="font-bold">About</h4>
-          <p className="md:h-[120px] md:w-[260px] text-start font-extralight text-[14px] md:text-[15px]">
+          <p className="md:h-[120px] md:w-[260px] text-start font-extralight text-[12px] md:text-[14px]">
             Lorem ipsum dolor sit amet <br /> consectetur, adipisicing elit.
             Impedit ex nostrum nesciunt, <br /> voluptates sed corporis <br />
             molestiae esse voluptas eligendi similique{" "}
