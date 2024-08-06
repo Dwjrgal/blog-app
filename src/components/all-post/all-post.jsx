@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 
 const posts = [
   {
@@ -48,6 +49,18 @@ const posts = [
 ];
 
 const AllPost = () => {
+  const [articles,setArticles] = useState([])
+
+  const getArticlesData = async () =>{
+    const res = await fetch ("https://dev.to/api/articles?page=9& per_page=9");
+    const data = await response.json()
+    console.log ("data",data)
+  }
+
+  useEffect(() =>{
+    getArticlesData();
+  }, [articles])
+
   return (
     <div className="mt-24 flex flex-col gap-6 mx-20">
       <h3 className="text-md sm:text-lg font-bold">All Blog Post</h3>
@@ -73,6 +86,8 @@ const AllPost = () => {
             <p className=" sm:h-[80px] sm:w-[230px]  sm:text-[14x] sm:font-semibold  sm:font-base">
               {posts.title}
             </p>
+            <article>{articles.title}</article>
+
             <p className="text-[11px] font-extralight text-gray-600">
               {posts.date}
             </p>
