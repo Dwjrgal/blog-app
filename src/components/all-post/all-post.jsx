@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 
 const posts = [
@@ -52,7 +52,7 @@ const AllPost = () => {
   const [articles,setArticles] = useState([])
 
   const getArticlesData = async () =>{
-    const res = await fetch ("https://dev.to/api/articles?page=9& per_page=9");
+    const response = await fetch ("https://dev.to/api/articles?page=9& per_page=9");
     const data = await response.json()
     console.log ("data",data)
   }
@@ -86,7 +86,13 @@ const AllPost = () => {
             <p className=" sm:h-[80px] sm:w-[230px]  sm:text-[14x] sm:font-semibold  sm:font-base">
               {posts.title}
             </p>
-            <article>{articles.title}</article>
+             {/* {articles.map((article) =>{
+              console.log("article", article)
+            return(
+              <Card title ={article.title}/>
+            )
+            })}
+             */}
 
             <p className="text-[11px] font-extralight text-gray-600">
               {posts.date}
