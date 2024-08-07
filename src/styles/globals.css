@@ -21,3 +21,17 @@
     text-wrap: balance;
   }
 }
+
+.blog-detail{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 30px;
+}
+
+.blog-detail img{
+  height: 400px;
+  width: 600px;
+  border-radius: 8px;
+}
