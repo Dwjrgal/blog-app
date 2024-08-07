@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 import { useEffect } from "react";
 
@@ -48,7 +49,7 @@ const posts = [
   },
 ];
 
-const AllPost = () => {
+const AllPost = ({ article }) => {
   const [articles, setArticles] = useState([]);
 
   const getArticlesData = async () => {
@@ -84,23 +85,25 @@ const AllPost = () => {
       </div>
       <section className="md:grid md:grid-cols-3 md:gap-4  gap-2 md:items-center">
         {articles.map((card) => (
-          <div className="md:w-[280px] w-[200px] h-[300px] md:h-[340px] border rounded flex flex-col gap-3 justify-center items-start pl-4">
-            <img
-              className="md:h-[160px] md:w-[240px] rounded-md"
-              src={card.social_image}
-              alt=""
-            />
-            <span className="text-[11px] h-5 w-24  text-blue rounded-md text-center bg-slate-200 text-indigo-600 font-extralight">
-              {card.type_of}
-            </span>
-            <p className=" sm:h-[80px] sm:w-[230px]  sm:text-[14x] sm:font-semibold  sm:font-base">
-              {card.title}
-            </p>
+          <Link href={"/blog/" + card.id}>
+            <div className="md:w-[280px] w-[200px] h-[300px] md:h-[340px] border rounded flex flex-col gap-3 justify-center items-start pl-4">
+              <img
+                className="md:h-[160px] md:w-[240px] rounded-md"
+                src={card.social_image}
+                alt=""
+              />
+              <span className="text-[11px] h-5 w-24  text-blue rounded-md text-center bg-slate-200 text-indigo-600 font-extralight">
+                {card.type_of}
+              </span>
+              <p className=" sm:h-[80px] sm:w-[230px]  sm:text-[14x] sm:font-semibold  sm:font-base">
+                {card.title}
+              </p>
 
-            <p className="text-[11px] font-extralight text-gray-600">
-              {card.published_at}
-            </p>
-          </div>
+              <p className="text-[11px] font-extralight text-gray-600">
+                {card.published_at}
+              </p>
+            </div>
+          </Link>
         ))}
         <button className=" hidden md:flex h-10 w-24 border rounded-md text-xs md:pl-2 md:pt-3 font-extralight text-gray-500 mx-[160%] my-20">
           Load More
