@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const posts = [
   {
@@ -108,32 +109,34 @@ const Blog = () => {
 
   return (
     <>
-      <div className="mt-24 flex flex-col gap-6 mx-20">
-        <h3 className="text-md sm:text-lg font-bold">All Blog Post</h3>
-        <section className="md:grid md:grid-cols-3 sm:gap-4  gap-2 md:items-enter">
-          {articles.map((card) => (
-            <div className="sm:w-[280px] sm:h-[340px] border rounded flex flex-col gap-3 justify-center items-start pl-4">
-              <img
-                className="sm:h-[160px] sm:w-[240px] rounded-md"
-                src={card.social_image}
-                alt=""
-              />
-              <span className="text-[11px] h-5 w-24  text-blue rounded-md text-center bg-slate-200 text-indigo-600 font-extralight">
-                {card.type_of}
-              </span>
-              <p className=" sm:h-[80px] sm:w-[230px]  sm:text-[14x] sm:font-semibold  sm:font-base">
-                {card.title}
-              </p>
-              <p className="text-[11px] font-extralight text-gray-600">
-                {card.published_at}
-              </p>
-            </div>
-          ))}
-          <button className=" hidden md:flex h-10 w-24 border rounded-md text-xs font-extralight text-gray-500 mx-[160%] my-20">
-            Load More
-          </button>
-        </section>
-      </div>
+      <Link href={"/blog/" + articles.id}>
+        <div className="mt-24 flex flex-col gap-6 mx-20">
+          <h3 className="text-md sm:text-lg font-bold">All Blog Post</h3>
+          <section className="md:grid md:grid-cols-3 sm:gap-4  gap-2 md:items-enter">
+            {articles.map((card) => (
+              <div className="sm:w-[280px] sm:h-[340px] border rounded flex flex-col gap-3 justify-center items-start pl-4">
+                <img
+                  className="sm:h-[160px] sm:w-[240px] rounded-md"
+                  src={card.social_image}
+                  alt=""
+                />
+                <span className="text-[11px] h-5 w-24  text-blue rounded-md text-center bg-slate-200 text-indigo-600 font-extralight">
+                  {card.type_of}
+                </span>
+                <p className=" sm:h-[80px] sm:w-[230px]  sm:text-[14x] sm:font-semibold  sm:font-base">
+                  {card.title}
+                </p>
+                <p className="text-[11px] font-extralight text-gray-600">
+                  {card.published_at}
+                </p>
+              </div>
+            ))}
+            <button className=" hidden md:flex h-10 w-24 border rounded-md text-xs font-extralight text-gray-500 mx-[160%] my-20">
+              Load More
+            </button>
+          </section>
+        </div>
+      </Link>
     </>
   );
 };
