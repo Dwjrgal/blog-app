@@ -49,17 +49,20 @@ const posts = [
 ];
 
 const AllPost = () => {
-  const [articles,setArticles] = useState([])
+  const [articles, setArticles] = useState([]);
 
-  const getArticlesData = async () =>{
-    const response = await fetch ("https://dev.to/api/articles?page=9& per_page=9");
-    const data = await response.json()
-    console.log ("data",data)
-  }
+  const getArticlesData = async () => {
+    const response = await fetch(
+      "https://dev.to/api/articles?page=1& per_page=9"
+    );
+    const data = await response.json();
+    setArticles(data);
+    // console.log("data", data);
+  };
 
-  useEffect(() =>{
+  useEffect(() => {
     getArticlesData();
-  }, [articles])
+  }, [articles]);
 
   return (
     <div className="mt-24 flex flex-col gap-6 mx-20">
@@ -80,29 +83,22 @@ const AllPost = () => {
         </button>
       </div>
       <section className="md:grid md:grid-cols-3 md:gap-4  gap-2 md:items-center">
-        {posts.map((posts) => (
+        {articles.map((card) => (
           <div className="md:w-[280px] w-[200px] h-[300px] md:h-[340px] border rounded flex flex-col gap-3 justify-center items-start pl-4">
             <img
               className="md:h-[160px] md:w-[240px] rounded-md"
-              src={posts.photo}
+              src={card.social_image}
               alt=""
             />
             <span className="text-[11px] h-5 w-24  text-blue rounded-md text-center bg-slate-200 text-indigo-600 font-extralight">
-              {posts.badge}
+              {card.type_of}
             </span>
             <p className=" sm:h-[80px] sm:w-[230px]  sm:text-[14x] sm:font-semibold  sm:font-base">
-              {posts.title}
+              {card.title}
             </p>
-             {/* {articles.map((article) =>{
-              console.log("article", article)
-            return(
-              <Card title ={article.title}/>
-            )
-            })}
-             */}
 
             <p className="text-[11px] font-extralight text-gray-600">
-              {posts.date}
+              {card.published_at}
             </p>
           </div>
         ))}
