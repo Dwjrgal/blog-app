@@ -5,14 +5,14 @@ const Contact = () => {
     <>
       <div className="md:flex md:justify-center md:my-20 my-10">
         <section className="md:flex md:flex-col md:px-40">
-          <h1 className="font-bold md:text-xl pl-8">Contact Us</h1>
-          <p className="md:w-[643px]  h-[100px] md:h-[143px] mt-2 px-8">
+          <h1 className="font-bold md:text-xl">Contact Us</h1>
+          <p className="md:w-[643px]  h-[100px] md:h-[143px] mt-2">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias
             nesciunt similique incidunt modi velit quo optio, aliquam magni
             ipsa, quam reiciendis non deserunt ullam eius dicta, minus soluta
             vel rerum!
           </p>
-          <div className=" flex  gap-16  px-8 ">
+          <div className=" flex  gap-16">
             <div className="border border-slate-400 rounded-md md:h-[120px] md:w-[280px] p-5">
               <h4 className="font-bold">Address</h4>
               <p className="font-base text-gray-600 text-sm pt-1">

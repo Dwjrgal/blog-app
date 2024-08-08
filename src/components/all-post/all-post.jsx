@@ -105,10 +105,12 @@ const AllPost = ({ article }) => {
             </div>
           </Link>
         ))}
-        <button className=" hidden md:flex h-10 w-24 border rounded-md text-xs md:pl-2 md:pt-3 font-extralight text-gray-500 mx-[160%] my-20">
+      </section>
+      <div className="flex justify-center">
+        <button className=" h-10 w-24 border rounded-md text-xs text-center font-extralight text-gray-500  my-10">
           Load More
         </button>
-      </section>
+      </div>
     </div>
   );
 };

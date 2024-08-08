@@ -22,7 +22,7 @@
   }
 }
 
-.blog-detail{
+.blog-detail {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -30,8 +30,13 @@
   padding: 30px;
 }
 
-.blog-detail img{
+.blog-detail img {
   height: 400px;
   width: 600px;
   border-radius: 8px;
+}
+
+.blog-detail p {
+  width: 600px;
+  font-size: 12px;
 }

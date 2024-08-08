@@ -26,8 +26,10 @@ const cards = [
 const Trending = () => {
   return (
     <>
-      <div className="flex gap-4 flex-col mt-36 items-center">
+      <div className="flex justify-start">
         <h2 className="font-bold text-xl md:text-bold">Trending</h2>
+      </div>
+      <div className="flex gap-4 flex-col mt-36 items-center">
         <div className="md:flex md:gap-6">
           {cards.map((cards) => (
             <div className="relative flex flex-col sm:flex justify-end">
