@@ -79,7 +79,7 @@ const AllPost = ({ article }) => {
             <li className=" hover:text-orange-500">Branding</li>
           </ul>
         </div>
-        <button className="text-center  rounded w-20 text-xs h-5 font-semibold text-[10px]">
+        <button className="text-center  rounded w-20 text-xs h-5 font-semibold text-[10px] hover:text-yellow-500">
           View all
         </button>
       </div>
