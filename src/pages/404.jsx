@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const NotFoundPages = () => {
   return (
@@ -14,7 +15,7 @@ const NotFoundPages = () => {
             you are looking for.
           </p>
           <button className="hidden md:flex bg-blue-700 text-white w-[100px] h-[30px] rounded-md text-center text-[12px] pl-2 py-1">
-            Back To Home
+            <Link href="/">Back to home</Link>
           </button>
         </div>
       </section>

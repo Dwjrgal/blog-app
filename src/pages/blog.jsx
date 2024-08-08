@@ -93,10 +93,11 @@ const posts = [
 
 const Blog = () => {
   const [articles, setArticles] = useState([]);
+  const [count, setCount] = useState(6);
 
   const getArticlesData = async () => {
     const response = await fetch(
-      "https://dev.to/api/articles?page=1& per_page=9"
+      `https://dev.to/api/articles?page=1& per_page=${count}`
     );
     const data = await response.json();
     setArticles(data);
@@ -133,7 +134,10 @@ const Blog = () => {
             ))}
           </section>
           <div className="flex justify-center">
-            <button className=" h-10 w-24 border rounded-md text-xs text-center font-extralight text-gray-500  my-10">
+            <button
+              onClick={() => setCount(count + 3)}
+              className=" h-10 w-24 border rounded-md text-xs text-center font-extralight text-gray-500  my-10"
+            >
               Load More
             </button>
           </div>

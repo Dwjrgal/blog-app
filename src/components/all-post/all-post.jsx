@@ -81,7 +81,7 @@ const AllPost = ({ article }) => {
           </ul>
         </div>
         <button className="text-center  rounded w-20 text-xs h-5 font-semibold text-[10px] hover:text-yellow-500">
-          View all
+          <Link href="/blog">View all</Link>
         </button>
       </div>
       <section className="md:grid md:grid-cols-3 md:gap-4  gap-2 md:items-center">
