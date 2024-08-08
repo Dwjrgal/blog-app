@@ -21,7 +21,7 @@ const ArticleDetail = () => {
       <div className="flex">
         <img
           className="w-10 h-10 rounded-full"
-          src={articleDetail?.user.profile_image}
+          src={articleDetail?.user?.profile_image}
           alt=""
         />
         <div className="">
