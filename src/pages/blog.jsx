@@ -111,7 +111,7 @@ const Blog = () => {
   return (
     <>
       <Link href={"/blog/" + articles.id}>
-        <div className="mt-24 flex flex-col gap-6 mx-20">
+        <div className="mt-20 flex flex-col gap-6 mx-20">
           <h3 className="text-md sm:text-lg font-bold">All Blog Post</h3>
           <section className="md:grid md:grid-cols-3 sm:gap-4  gap-2 md:items-center">
             {articles.map((card) => (
@@ -136,7 +136,7 @@ const Blog = () => {
           <div className="flex justify-center">
             <button
               onClick={() => setCount(count + 3)}
-              className=" h-10 w-24 border rounded-md text-xs text-center font-extralight text-gray-500  my-10"
+              className=" h-10 w-24 border rounded-md text-xs text-center font-extralight text-gray-500  my-10 hover:border-emerald-300"
             >
               Load More
             </button>

@@ -110,7 +110,7 @@ const AllPost = ({ article }) => {
       <div className="flex justify-center">
         <button
           onClick={() => setCount(count + 3)}
-          className=" h-10 w-24 border rounded-md text-xs text-center font-extralight text-gray-500  my-10"
+          className=" h-10 w-24 border rounded-md text-xs text-center font-extralight text-gray-500  my-10 hover:border-emerald-300"
         >
           Load More
         </button>

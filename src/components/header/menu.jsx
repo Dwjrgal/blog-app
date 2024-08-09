@@ -4,14 +4,14 @@ const Menu = () => {
   return (
     <div>
       <ul className="flex gap-5 p-5 text-sm md:text-[14px] text-slate-500 font-medium">
-        <li className="hover:text-lime-600">
+        <li className="hover:text-black">
           <Link href="/"> Home </Link>
         </li>
-        <li className="hover:text-yellow-500">
+        <li className="hover:text-black">
           {" "}
           <Link href="/blog"> Blog </Link>
         </li>
-        <li className="hover:text-blue-600">
+        <li className="hover:text-black">
           {" "}
           <Link href="/contact"> Contact </Link>
         </li>
