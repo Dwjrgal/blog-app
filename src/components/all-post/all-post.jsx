@@ -68,6 +68,11 @@ const AllPost = ({ article }) => {
     getArticlesData();
   }, [count]);
   console.log("count", count);
+
+  const findPost = articles?.filter((cards) =>
+    cards?.title?.toLowerCase().includes(searchValue.toLowerCase())
+  );
+
   return (
     <div className="mt-24 flex flex-col gap-6 mx-20">
       <h2>Search:{searchValue}</h2>
@@ -88,7 +93,7 @@ const AllPost = ({ article }) => {
         </button>
       </div>
       <section className="md:grid md:grid-cols-3 md:gap-4  gap-2 md:items-center">
-        {articles.map((card) => (
+        {findPost.map((card) => (
           <Link href={"/blog/" + card.id}>
             <div className="md:w-[280px] w-[200px] h-[300px] md:h-[340px] border rounded flex flex-col gap-3 justify-center items-start pl-4">
               <img

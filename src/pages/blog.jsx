@@ -1,6 +1,7 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Link from "next/link";
+import { SearchContext } from "@/provider/search-provider";
 
 const posts = [
   {
@@ -92,6 +93,7 @@ const posts = [
 ];
 
 const Blog = () => {
+  const { searchValue } = useContext(SearchContext);
   const [articles, setArticles] = useState([]);
   const [count, setCount] = useState(6);
 
@@ -108,13 +110,17 @@ const Blog = () => {
     getArticlesData();
   }, [articles]);
 
+  const findPost = articles?.filter((cards) =>
+    cards?.title?.toLowerCase().includes(searchValue.toLowerCase())
+  );
+
   return (
     <>
       <Link href={"/blog/" + articles.id}>
         <div className="mt-20 flex flex-col gap-6 mx-20">
           <h3 className="text-md sm:text-lg font-bold">All Blog Post</h3>
           <section className="md:grid md:grid-cols-3 sm:gap-4  gap-2 md:items-center">
-            {articles.map((card) => (
+            {findPost.map((card) => (
               <div className="sm:w-[280px] sm:h-[340px] border rounded flex flex-col gap-3 justify-center items-start pl-4">
                 <img
                   className="sm:h-[160px] sm:w-[240px] rounded-md"
