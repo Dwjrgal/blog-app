@@ -25,7 +25,7 @@ const About = () => {
         <div className=" hidden md:flex md:gap-5 md:text-gray-500">
           <FaSquareFacebook className="hover:text-blue-700" />
           <TbBrandTwitterFilled className="hover:text-blue-500" />
-          <FaSquareInstagram className="hover:text-rose-400" />
+          <FaSquareInstagram className=" hover:bg-gradient-to-r from-pink-500 via-orange-500 to-pink" />
           <FaLinkedin className="hover:text-blue-600" />
         </div>
       </section>
