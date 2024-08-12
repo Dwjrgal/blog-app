@@ -1,6 +1,7 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useEffect } from "react";
+import { SearchContext } from "@/provider/search-provider";
 
 const posts = [
   {
@@ -50,6 +51,7 @@ const posts = [
 ];
 
 const AllPost = ({ article }) => {
+  const { searchValue } = useContext(SearchContext);
   const [articles, setArticles] = useState([]);
   const [count, setCount] = useState(3);
 
@@ -68,6 +70,7 @@ const AllPost = ({ article }) => {
   console.log("count", count);
   return (
     <div className="mt-24 flex flex-col gap-6 mx-20">
+      <h2>Search:{searchValue}</h2>
       <div className="flex justify-between items-center">
         <div className="flex flex-col gap-4">
           <h3 className="text-md sm:text-lg font-bold">All Blog Post</h3>

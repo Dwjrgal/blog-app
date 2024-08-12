@@ -3,12 +3,14 @@ import { Inter } from "next/font/google";
 import { Main } from "next/document";
 import Content from "@/components/content";
 import AllPost from "@/components/all-post/all-post";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { SearchContext } from "@/provider/search-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [searchValue, setSearchValue] = useState("");
+  const { searchValue } = useContext(SearchContext);
+  // const [searchValue, setSearchValue] = useState("");
   const [articles, setArticles] = useState([]);
 
   const hanldeChange = (text) => {
