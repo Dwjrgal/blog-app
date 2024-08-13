@@ -18,13 +18,13 @@ const ArticleDetail = () => {
 
   return (
     <div className="p-10">
-      <div className="flex">
+      <div className="flex ml-40">
         <img
-          className="w-10 h-10 rounded-full"
-          src={articleDetail.user?.profile_image}
+          className="w-8 h-8 rounded-full"
+          src={articleDetail?.user?.profile_image}
           alt=""
         />
-        <div className="">
+        <div className="text-[11px] flex gap-2 items-center ml-2">
           <h2>Name</h2>
           <p>2024</p>
         </div>

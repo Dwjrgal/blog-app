@@ -41,6 +41,11 @@
   font-size: 12px;
 }
 
-element.style {
-  display: flex;
+.blog-detail ol {
+  font-size: 12px;
+}
+
+.blog-detail li {
+  font-size: 11px;
+  margin-left: 30px;
 }
