@@ -2,6 +2,8 @@ import Link from "next/link";
 import React, { useContext, useState } from "react";
 import { useEffect } from "react";
 import { SearchContext } from "@/provider/search-provider";
+import { toast } from "react-toastify";
+import Loader from "../Loader";
 
 const posts = [
   {
@@ -54,14 +56,22 @@ const AllPost = ({ article }) => {
   const { searchValue } = useContext(SearchContext);
   const [articles, setArticles] = useState([]);
   const [count, setCount] = useState(3);
+  const [isLoading, setIsLoading] = useState(false);
 
   const getArticlesData = async () => {
-    const response = await fetch(
-      `https://dev.to/api/articles?page=1&per_page=${count}`
-    );
-    const data = await response.json();
-    setArticles(data);
-    // console.log("data", data);
+    try {
+      setIsLoading(true);
+      const response = await fetch(
+        `https://dev.to/api/articles?page=1&per_page=${count}`
+      );
+      const data = await response.json();
+      setArticles(data);
+
+      // console.log("data", data);
+      setIsLoading(false);
+    } catch (error) {
+      toast.error("No internet connection");
+    }
   };
 
   useEffect(() => {
@@ -72,6 +82,10 @@ const AllPost = ({ article }) => {
   const findPost = articles?.filter((cards) =>
     cards?.title?.toLowerCase().includes(searchValue.toLowerCase())
   );
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <div className="mt-24 flex flex-col gap-6 mx-20">
