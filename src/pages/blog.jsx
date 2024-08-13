@@ -108,7 +108,7 @@ const Blog = () => {
 
   useEffect(() => {
     getArticlesData();
-  }, [articles]);
+  }, [count]);
 
   const findPost = articles?.filter((cards) =>
     cards?.title?.toLowerCase().includes(searchValue.toLowerCase())
