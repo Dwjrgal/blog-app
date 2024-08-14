@@ -1,17 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { SlArrowLeft } from "react-icons/sl";
 import { SlArrowRight } from "react-icons/sl";
 
+const sliderImg = [
+  {
+    imgUrl: "./images/Image (1).png",
+  },
+  {
+    imgUrl:
+      "https://images.unsplash.com/photo-1723376779603-69f15cdfa034?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    imgUrl: "./images/image (2).png",
+  },
+];
+
 const Slider = () => {
+  const [currentImg, setCurrentImg] = useState(sliderImg);
+  const [changeImg, setChangeImg] = useState("");
   return (
     <>
-      <section className="flex flex-col gap-5">
-        <section className="flex justify-center items-center relative mx-20">
-          <img
-            className="w-[400px] h-[200px] rounded-sm sm:w-[900px] sm:h-[500px] mt-10"
-            src="./images/Image (1).png"
-            alt=""
-          />
+      <section className="flex flex-col gap-2">
+        <section className="flex items-center relative mx-20 overflow-hidden">
+          {sliderImg.map((sliderImg) => (
+            <img
+              className={`min-w-full h-[200px] rounded-sm sm:w-[900px] sm:h-[500px] mt-10 -translate-x-${changeImg}`}
+              src={sliderImg.imgUrl}
+            />
+          ))}
+          {/* -translate-x-0 ->  -translate-x-full -> -translate-x-full */}
+          {/* <img
+            className={`min-w-full h-[200px] rounded-sm sm:w-[900px] sm:h-[500px] mt-10 `}
+            src={sliderImg[0].imgUrl}
+          /> */}
 
           <div className="h-[80px] w-[120px] bg-slate-50 rounded-lg flex flex-col md:gap-6 absolute bottom-2 left-16 justify-center sm:pl-8  pl-4 gap-3 sm:w-[450px] sm:h-[200px]">
             <h4 className="h-[25px] w-[97px] text-center bg-blue-700 rounded-md text-white text-xs md:text-sm">
@@ -25,11 +46,19 @@ const Slider = () => {
             </span>
           </div>
         </section>
-        <div className="flex ml-[88%]">
-          <div className=" w-10 flex border rounded-md h-6 justify-center gap-2 items-center">
-            <SlArrowLeft className="hover:text-blue-800" />
-            <SlArrowRight className="hover:text-blue-800" />
-          </div>
+        <div className="flex ml-[86%] gap-2">
+          <button
+            className="border-[1px] rounded-sm h-5 w-5 text-center border-slate-600 text-[10px]"
+            onClick={() => setChangeImg("full")}
+          >
+            <SlArrowLeft className="hover:text-yellow-300 " />
+          </button>
+          <button
+            className="border-[1px] rounded-sm h-5 w-5 border-slate-600 text-center pl-1"
+            onClick={() => setChangeImg("full")}
+          >
+            <SlArrowRight className="hover:text-yellow-300 text-[10px]" />
+          </button>
         </div>
       </section>
     </>

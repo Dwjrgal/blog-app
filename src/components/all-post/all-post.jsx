@@ -105,7 +105,7 @@ const AllPost = ({ article }) => {
           <Link href="/blog">View all</Link>
         </button>
       </div>
-      <section className="md:grid md:grid-cols-3 md:gap-4  gap-2 md:items-center">
+      <section className="md:grid md:grid-cols-3 md:gap-6  gap-2 md:items-center">
         {findPost.map((card) => (
           <Link href={"/blog/" + card.id}>
             <div className="md:w-[280px] w-[200px] h-[300px] md:h-[340px] border rounded flex flex-col gap-3 justify-center items-start pl-4">
