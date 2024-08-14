@@ -4,7 +4,8 @@ import { SlArrowRight } from "react-icons/sl";
 
 const sliderImg = [
   {
-    imgUrl: "./images/Image (1).png",
+    imgUrl:
+      "https://images.unsplash.com/photo-1721367632166-0d851a5349af?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     imgUrl:
