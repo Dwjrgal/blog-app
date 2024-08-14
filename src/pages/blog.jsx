@@ -92,14 +92,14 @@ const posts = [
   },
 ];
 
-const Blog = () => {
+const Blog = ({ article }) => {
   const { searchValue } = useContext(SearchContext);
   const [articles, setArticles] = useState([]);
   const [count, setCount] = useState(6);
 
   const getArticlesData = async () => {
     const response = await fetch(
-      `https://dev.to/api/articles?page=1& per_page=${count}`
+      `https://dev.to/api/articles?page=1&per_page=${count}`
     );
     const data = await response.json();
     setArticles(data);
@@ -117,11 +117,11 @@ const Blog = () => {
   return (
     <>
       <section className="flex justify-center">
-        <Link href={"/blog/" + articles.id}>
-          <div className="mt-20 flex flex-col gap-6 mx-20">
-            <h3 className="text-md sm:text-lg font-bold">All Blog Post</h3>
-            <section className="md:grid md:grid-cols-3 sm:gap-6  gap-2 md:items-center">
-              {findPost.map((card) => (
+        <div className="mt-20 flex flex-col gap-6 mx-20">
+          <h3 className="text-md sm:text-lg font-bold">All Blog Post</h3>
+          <section className="md:grid md:grid-cols-3 sm:gap-6  gap-2 md:items-center">
+            {findPost.map((card) => (
+              <Link href={"/blog/" + card.id}>
                 <div className="sm:w-[280px] sm:h-[340px] border rounded flex flex-col gap-3 justify-center items-start pl-4">
                   <img
                     className="sm:h-[160px] sm:w-[240px] rounded-md"
@@ -138,18 +138,18 @@ const Blog = () => {
                     {card.published_at}
                   </p>
                 </div>
-              ))}
-            </section>
-            <div className="flex justify-center">
-              <button
-                onClick={() => setCount(count + 3)}
-                className=" h-10 w-24 border rounded-md text-xs text-center font-extralight text-gray-500  my-10 hover:border-emerald-300"
-              >
-                Load More
-              </button>
-            </div>
+              </Link>
+            ))}
+          </section>
+          <div className="flex justify-center">
+            <button
+              onClick={() => setCount(count + 3)}
+              className=" h-10 w-24 border rounded-md text-xs text-center font-extralight text-gray-500  my-10 hover:border-emerald-300"
+            >
+              Load More
+            </button>
           </div>
-        </Link>
+        </div>
       </section>
     </>
   );
