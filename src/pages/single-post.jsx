@@ -16,7 +16,6 @@ const SinglePost = () => {
             <p>August 20, 2022</p>
           </div>
         </div>
-        <img src="./images/image (2).png" alt="" />
         <p className="md:text-sm text-xs">
           Traveling is an enriching experience that opens up new horizons,
           exposes us to different cultures, and creates memories that last a
