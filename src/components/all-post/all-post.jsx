@@ -5,52 +5,6 @@ import { SearchContext } from "@/provider/search-provider";
 import { toast } from "react-toastify";
 import Loader from "../articleLoader";
 
-const posts = [
-  {
-    photo: "./images/Rectangle 38.png",
-    badge: "Technology",
-    title:
-      "The Impact of Technology on the Workplace: How Technology is Changing",
-    date: "August 20, 2022",
-  },
-  {
-    photo:
-      "https://images.unsplash.com/photo-1720048169707-a32d6dfca0b3?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    badge: "Design",
-    title:
-      "The Impact of Technology on the Workplace: How Technology is Changing",
-    date: "August 20, 2022",
-  },
-  {
-    photo:
-      "https://plus.unsplash.com/premium_photo-1722111091429-dd3dc55979d3?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    badge: "Technology",
-    title:
-      "The Impact of Technology on the Workplace: How Technology is Changing",
-    date: "August 20, 2022",
-  },
-  {
-    photo: "./images/image-14.avif",
-    badge: "Software",
-    title:
-      "The Impact of Technology on the Workplace: How Technology is Changing",
-    date: "August 20, 2022",
-  },
-  {
-    photo: "./images/screen.avif",
-    badge: "Technology",
-    title:
-      "The Impact of Technology on the Workplace: How Technology is Changing",
-    date: "August 20, 2022",
-  },
-  {
-    photo: "./images/image-12.avif",
-    badge: "Technology",
-    title:
-      "The Impact of Technology on the Workplace: How Technology is Changing",
-    date: "August 20, 2022",
-  },
-];
 
 const AllPost = ({ article }) => {
   const { searchValue } = useContext(SearchContext);
