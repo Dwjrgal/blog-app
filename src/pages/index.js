@@ -1,11 +1,8 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
-import { Main } from "next/document";
 import Content from "@/components/content";
 import AllPost from "@/components/all-post/all-post";
 import { useContext, useState } from "react";
 import { SearchContext } from "@/provider/search-provider";
-import Loader from "@/components/loader";
 
 const inter = Inter({ subsets: ["latin"] });
 
