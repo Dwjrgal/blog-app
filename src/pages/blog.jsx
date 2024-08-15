@@ -95,7 +95,7 @@ const posts = [
 const Blog = ({ article }) => {
   const { searchValue } = useContext(SearchContext);
   const [articles, setArticles] = useState([]);
-  const [count, setCount] = useState(6);
+  const [count, setCount] = useState(9);
 
   const getArticlesData = async () => {
     const response = await fetch(
