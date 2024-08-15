@@ -92,7 +92,7 @@ const posts = [
   },
 ];
 
-const Blog = ({ article }) => {
+const Blog = () => {
   const { searchValue } = useContext(SearchContext);
   const [articles, setArticles] = useState([]);
   const [count, setCount] = useState(9);
@@ -103,7 +103,7 @@ const Blog = ({ article }) => {
     );
     const data = await response.json();
     setArticles(data);
-    // console.log("data", data);
+    console.log("data", data);
   };
 
   useEffect(() => {
