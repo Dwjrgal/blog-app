@@ -25,7 +25,7 @@ const Slider = () => {
         <section className="flex items-center relative mx-20 overflow-hidden">
           {sliderImg.map((sliderImg) => (
             <img
-              className={`min-w-full h-[200px] rounded-sm sm:w-[900px] sm:h-[500px] mt-10 -translate-x-${changeImg}`}
+              className={`w-[1200px] h-[200px] rounded-sm sm:w-[900px] sm:h-[500px] mt-10 -translate-x-${changeImg}`}
               src={sliderImg.imgUrl}
             />
           ))}

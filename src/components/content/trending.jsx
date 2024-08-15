@@ -28,7 +28,7 @@ const Trending = () => {
     <>
       <Link href="single-post">
         <h2 className="font-bold text-xl md:text-bold mb-2">Trending</h2>
-        <div className="flex md:gap-4 items-center">
+        <div className="flex md:gap-4 items-center mx-30">
           {/* <div className="md:flex md:gap-6"> */}
           {cards.map((cards) => (
             <img

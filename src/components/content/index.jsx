@@ -6,7 +6,7 @@ const content = () => {
   return (
     <div>
       <Slider />
-      <div className="flex px-20 items-start flex-col my-20">
+      <div className="flex items-center flex-col my-20">
         <Trending />
       </div>
     </div>
