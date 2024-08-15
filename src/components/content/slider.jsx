@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { SlArrowLeft } from "react-icons/sl";
 import { SlArrowRight } from "react-icons/sl";
+import Carousel from "@/components/carousel";
 
 const sliderImg = [
   {
@@ -17,23 +18,20 @@ const sliderImg = [
 ];
 
 const Slider = () => {
-  const [currentImg, setCurrentImg] = useState(sliderImg);
-  const [changeImg, setChangeImg] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   return (
     <>
       <section className="flex flex-col gap-2">
-        <section className="flex items-center relative mx-20 overflow-hidden">
-          {sliderImg.map((sliderImg) => (
+        <section className=" w-2/3 flex justify-center relative m-auto overflow-hidden">
+          <Carousel sliderImg={sliderImg} currentIndex={currentIndex} />
+
+          {/* {sliderImg.map((sliderImg) => (
             <img
               className={`w-[1200px] h-[200px] rounded-sm sm:w-[900px] sm:h-[500px] mt-10 -translate-x-${changeImg}`}
               src={sliderImg.imgUrl}
             />
-          ))}
-          {/* -translate-x-0 ->  -translate-x-full -> -translate-x-full */}
-          {/* <img
-            className={`min-w-full h-[200px] rounded-sm sm:w-[900px] sm:h-[500px] mt-10 `}
-            src={sliderImg[0].imgUrl}
-          /> */}
+          ))} */}
 
           <div className="h-[80px] w-[120px] bg-slate-50 rounded-lg flex flex-col md:gap-6 absolute bottom-2 left-16 justify-center sm:pl-8  pl-4 gap-3 sm:w-[450px] sm:h-[200px]">
             <h4 className="h-[25px] w-[97px] text-center bg-blue-700 rounded-md text-white text-xs md:text-sm">
@@ -47,16 +45,16 @@ const Slider = () => {
             </span>
           </div>
         </section>
-        <div className="flex ml-[86%] gap-2">
+        <div className="flex ml-[79%] gap-2">
           <button
             className="border-[1px] rounded-sm h-5 w-5 text-center border-slate-600 text-[10px]"
-            onClick={() => setChangeImg("full")}
+            onClick={() => setCurrentIndex(currentIndex - 1)}
           >
             <SlArrowLeft className="hover:text-yellow-300 " />
           </button>
           <button
             className="border-[1px] rounded-sm h-5 w-5 border-slate-600 text-center pl-1"
-            onClick={() => setChangeImg("full")}
+            onClick={() => setCurrentIndex(currentIndex + 1)}
           >
             <SlArrowRight className="hover:text-yellow-300 text-[10px]" />
           </button>

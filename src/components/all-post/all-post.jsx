@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 import { useEffect } from "react";
 import { SearchContext } from "@/provider/search-provider";
 import { toast } from "react-toastify";
-import Loader from "../Loader";
+import Loader from "../loader";
 
 const posts = [
   {
