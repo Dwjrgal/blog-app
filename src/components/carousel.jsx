@@ -4,7 +4,7 @@ const Carousel = ({ sliderImg, currentIndex }) => {
   return (
     <>
       <div
-        className="flex h-full transition-all duration-150"
+        className=" flex h-full transition-all duration-150 w-[1250px] rounded-sm"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {sliderImg.map((sliderImg, i) => (
