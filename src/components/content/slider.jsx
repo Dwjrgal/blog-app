@@ -23,7 +23,7 @@ const Slider = () => {
   return (
     <>
       <section className="flex flex-col gap-2">
-        <section className=" w-2/3 flex justify-center relative m-auto overflow-hidden">
+        <section className=" w-2/3  relative m-auto overflow-hidden mx-auto">
           <Carousel sliderImg={sliderImg} currentIndex={currentIndex} />
 
           {/* {sliderImg.map((sliderImg) => (

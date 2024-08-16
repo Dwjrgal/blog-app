@@ -5,7 +5,6 @@ import { SearchContext } from "@/provider/search-provider";
 import { toast } from "react-toastify";
 import Loader from "../articleLoader";
 
-
 const AllPost = ({ article }) => {
   const { searchValue } = useContext(SearchContext);
   const [articles, setArticles] = useState([]);
@@ -36,10 +35,6 @@ const AllPost = ({ article }) => {
   const findPost = articles?.filter((cards) =>
     cards?.title?.toLowerCase().includes(searchValue.toLowerCase())
   );
-
-  if (isLoading) {
-    return <Loader />;
-  }
 
   return (
     <div className="mt-24 flex flex-col gap-6 mx-20">
@@ -81,6 +76,7 @@ const AllPost = ({ article }) => {
             </div>
           </Link>
         ))}
+        {isLoading && <Loader />}
       </section>
       <div className="flex justify-center">
         <button

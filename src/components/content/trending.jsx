@@ -48,7 +48,7 @@ const Trending = () => {
               <Link href={"/blog/" + cards.id}>
                 <div>
                   <img
-                    className="md:h-60 md:w-[218px] rounded-md h-40 w-40 bg-blend-darken relative"
+                    className="md:h-60 md:w-52 rounded-md h-40 w-40 bg-blend-darken relative"
                     src={cards.social_image}
                   />
                   <div className="pl-2 bg-transparent">
