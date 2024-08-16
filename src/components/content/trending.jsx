@@ -1,29 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
-// const cards = [
-//   {
-//     title: "technology",
-//     text: "The Impact of Technology on the Workplace: How Technology is Changing",
-//     img: "./images/post-card-overlay.svg",
-//   },
-//   {
-//     title: "technology",
-//     text: "The Impact of Technology on the Workplace: How Technology is Changing",
-//     img: "./images/post-card-overlay.png",
-//   },
-//   {
-//     title: "technology",
-//     text: "The Impact of Technology on the Workplace: How Technology is Changing",
-//     img: "/images/rec.png",
-//   },
-//   {
-//     title: "technology",
-//     text: "The Impact of Technology on the Workplace: How Technology is Changing",
-//     img: "/images/rec-2.png",
-//   },
-// ];
-
 const Trending = () => {
   const [cards, setCards] = useState([]);
   const getTrendingData = async () => {
@@ -52,10 +29,10 @@ const Trending = () => {
                     src={cards.social_image}
                   />
                   <div className="pl-2">
-                    <p className="text-[11px] h-5 w-24  text-blue rounded-md text-center bg-indigo-400 text-white font-extralight absolute top-28">
+                    <p className="md:text-[11px] h-5 md:w-24  text-blue rounded-md text-center bg-indigo-400 text-white font-extralight absolute top-28">
                       {cards.type_of}
                     </p>
-                    <h5 className="text-sm w-48 text-white font-bold absolute top-32 pt-4">
+                    <h5 className="md:text-sm w-48 text-xs text-white font-bold absolute top-32 pt-4">
                       {cards.title}
                     </h5>
                   </div>
