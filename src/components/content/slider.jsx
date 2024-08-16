@@ -23,16 +23,8 @@ const Slider = () => {
   return (
     <>
       <section className="flex flex-col gap-2">
-        <section className=" w-2/3  relative m-auto overflow-hidden mx-auto">
+        <section className=" w-2/3  relative  overflow-hidden mx-auto">
           <Carousel sliderImg={sliderImg} currentIndex={currentIndex} />
-
-          {/* {sliderImg.map((sliderImg) => (
-            <img
-              className={`w-[1200px] h-[200px] rounded-sm sm:w-[900px] sm:h-[500px] mt-10 -translate-x-${changeImg}`}
-              src={sliderImg.imgUrl}
-            />
-          ))} */}
-
           <div className="h-[80px] w-[120px] bg-slate-50 rounded-lg flex flex-col md:gap-6 absolute bottom-2 left-16 justify-center sm:pl-8  pl-4 gap-3 sm:w-[450px] sm:h-[200px]">
             <h4 className="h-[25px] w-[97px] text-center bg-blue-700 rounded-md text-white text-xs md:text-sm">
               Technology

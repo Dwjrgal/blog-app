@@ -9,7 +9,7 @@ const Carousel = ({ sliderImg, currentIndex }) => {
       >
         {sliderImg.map((sliderImg, i) => (
           <img
-            className={`min-w-full h-[140px] rounded-sm sm:w-[900px] sm:h-[500px] mt-10 ${sliderImg}`}
+            className={`min-w-full h-[140px]  rounded-sm sm:w-[900px] sm:h-[500px] mt-10 ${sliderImg}`}
             src={sliderImg.imgUrl}
           />
         ))}
