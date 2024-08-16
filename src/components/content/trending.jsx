@@ -45,20 +45,22 @@ const Trending = () => {
         <div className="flex md:gap-4 items-center mx-30">
           <div className="flex gap-5 relative">
             {cards.map((cards) => (
-              <div className="bg-blend-da;">
-                <img
-                  className="md:h-60 md:w-52 rounded-md h-40 w-40 bg-blend-darken relative"
-                  src={cards.social_image}
-                />
-                <div className="pl-2 bg-transparent">
-                  {/* <p className="text-[11px] h-5 w-24  text-blue rounded-md text-center bg-indigo-400 text-white font-extralight absolute top-24">
+              <Link href={"/blog/" + cards.id}>
+                <div>
+                  <img
+                    className="md:h-60 md:w-52 rounded-md h-40 w-40 bg-blend-darken relative"
+                    src={cards.social_image}
+                  />
+                  <div className="pl-2 bg-transparent">
+                    {/* <p className="text-[11px] h-5 w-24  text-blue rounded-md text-center bg-indigo-400 text-white font-extralight absolute top-24">
                     {cards.type_of}
                   </p> */}
-                  {/* <h5 className="text-sm w-48 text-white font-bold absolute top-28">
+                    {/* <h5 className="text-sm w-48 text-white font-bold absolute top-28">
                     {cards.title}
                   </h5> */}
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

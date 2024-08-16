@@ -8,7 +8,7 @@ import Menu from "./menu";
 const About = () => {
   return (
     <>
-      <section className="sm:flex sm:gap-40">
+      <section className="sm:flex sm:gap-40 flex">
         <div className="md:flex md:flex-col md:gap-6">
           <h4 className="font-bold">About</h4>
           <p className="md:h-[120px] md:w-[260px] text-start font-extralight text-[12px] md:text-[14px]">
