@@ -48,16 +48,16 @@ const Trending = () => {
               <Link href={"/blog/" + cards.id}>
                 <div>
                   <img
-                    className="md:h-60 md:w-52 rounded-md h-40 w-40 bg-blend-darken relative"
+                    className="md:h-60 md:w-52 rounded-md h-40 w-40 bg-blend-darken relative brightness-50 blur-[1px]"
                     src={cards.social_image}
                   />
-                  <div className="pl-2 bg-transparent">
-                    {/* <p className="text-[11px] h-5 w-24  text-blue rounded-md text-center bg-indigo-400 text-white font-extralight absolute top-24">
-                    {cards.type_of}
-                  </p> */}
-                    {/* <h5 className="text-sm w-48 text-white font-bold absolute top-28">
-                    {cards.title}
-                  </h5> */}
+                  <div className="pl-2">
+                    <p className="text-[11px] h-5 w-24  text-blue rounded-md text-center bg-indigo-400 text-white font-extralight absolute top-28">
+                      {cards.type_of}
+                    </p>
+                    <h5 className="text-sm w-48 text-white font-bold absolute top-32 pt-4">
+                      {cards.title}
+                    </h5>
                   </div>
                 </div>
               </Link>
