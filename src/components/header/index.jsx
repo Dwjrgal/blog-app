@@ -5,7 +5,7 @@ import Search from "./search";
 
 const Header = () => {
   return (
-    <header className="flex justify-between px-16">
+    <header className="flex justify-between mx-44">
       <Logo />
       <Menu />
       <Search />
